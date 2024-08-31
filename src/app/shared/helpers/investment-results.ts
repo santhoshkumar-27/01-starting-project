@@ -24,3 +24,12 @@
 
 //   return annualData;
 // }
+
+
+
+export interface CalculateData {
+  initialInvestment: number,
+  duration: number,
+  expectedReturn: number,
+  annualInvestment: number
+}
