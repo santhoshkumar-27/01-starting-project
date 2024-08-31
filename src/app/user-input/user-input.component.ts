@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { Component, EventEmitter, output, Output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CalculateData } from '../shared/helpers/investment-results';
 
@@ -12,7 +12,8 @@ import { CalculateData } from '../shared/helpers/investment-results';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  @Output() calculate = new EventEmitter<CalculateData>()
+  calculate = output<CalculateData>()
+  // @Output() calculate = new EventEmitter<CalculateData>()
   initialInvestment = signal(0);
   annualInvestment = signal(0);
   expectedReturn = signal(5);
